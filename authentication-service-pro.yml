@@ -1,0 +1,20 @@
+spring:
+  datasource:
+      url: jdbc:sqlserver://10.240.1.112:1433;databaseName=ApiLoan
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+      username: root
+      password: Huao@123!!
+      tomcat:
+        max-active: 100
+        min-idle: 5
+        max-wait: 5000
+        remove-abandoned: true
+        remove-abandoned-timeout: 3000
+        log-abandoned: false
+        default-auto-commit: true
+        default-read-only: false
+# Mybatis配置
+mybatis:
+  typeAliasesPackage: com.loan.regloginservice.reglogin.entity
+  mapperLocations: classpath:mapper/*.xml
+carServerUrl: http://192.168.200.14/Api/AppService/

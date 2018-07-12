@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: api-gateway
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:1111/eureka/,http://peer2:2222/eureka/
+server:
+  port: 5555
+zuul:
+  routes:
+    property-loan:
+      path: /property-loan/**
+      serviceId: property-loan
+    reglogin-service:
+      path: /reglogin-service/**
+      serviceId: reglogin-service
+    redis-service:
+      path: /redis-service/**
+      serviceId: redis-service
+    authentication-service:
+      path: /authentication-service/**
+      serviceId: authentication-service

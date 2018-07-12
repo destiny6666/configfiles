@@ -1,0 +1,37 @@
+spring:
+  datasource:
+      url: jdbc:sqlserver://192.168.100.39:1433;databaseName=ApiLoan
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+      username: sa
+      password: e-age@2017
+      type: com.alibaba.druid.pool.DruidDataSource
+      druid:
+        max-active: 100
+        initial-size: 1
+        max-wait: 60000
+        min-idle: 1
+        time-between-eviction-runs-millis: 60000
+        min-evictable-idle-time-millis: 30000
+        validation-query: select 1
+        test-while-idle: true
+        test-on-borrow: false
+        test-on-return: false
+        pool-prepared-statements: true
+        max-open-prepared-statements: 20
+        remove-abandoned-timeout: 50000
+        remove-abandoned: true
+        log-abandoned: false
+        default-read-only: false
+        default-auto-commit: true
+  rabbitmq:
+    host: 192.168.100.161
+    port: 5672
+    username: admin
+    password: admin
+# Mybatis配置
+mybatis:
+  typeAliasesPackage: com.loan.regloginservice.reglogin.entity
+  mapperLocations: classpath:mapper/*.xml
+carServerUrl: http://192.168.100.39:8026/Api/AppService/
+exchange: propertyExchange_test
+routeKey: propertyQueue_test

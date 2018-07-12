@@ -1,0 +1,21 @@
+spring:
+  banner:
+    charset: utf-8
+    location: classpath:banner.txt
+  profiles:
+    active: pro
+  application:
+       name: property-loan
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:1111/eureka/,http://peer2:2222/eureka/
+logging:
+  config: classpath:logback-spring.xml
+server:
+  port: 8888
+mybatis:
+  config-location: classpath:config/mybatis-config.xml
+ribbon:
+  ReadTimeout: 3000
+  ConnectTimeout: 3000

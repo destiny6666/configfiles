@@ -1,0 +1,11 @@
+server:
+  port: 3030
+spring:
+  profiles:
+    active: dev
+  application:
+    name: reglogin-service
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:1111/eureka/,http://peer2:2222/eureka/

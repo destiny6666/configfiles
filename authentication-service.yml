@@ -1,0 +1,11 @@
+server:
+  port: 5050
+spring:
+  profiles:
+    active: dev
+  application:
+    name: authentication-service
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:1111/eureka/,http://peer2:2222/eureka/

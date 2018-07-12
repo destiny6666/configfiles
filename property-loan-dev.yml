@@ -1,0 +1,36 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/loandemo?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: root
+    druid:
+      initial-size: 5
+      max-active: 100
+      max-idle: 5
+      max-wait: 5000
+      remove-abandoned: true
+      remove-abandoned-timeout: 3000
+      log-abandoned: false
+      default-auto-commit: true
+      default-read-only: false
+      validation-query: select 1
+      test-on-borrow: true
+  redis:
+    database: 1
+    host: 192.168.100.161
+    port: 6380
+    password: root
+    jedis:
+      pool:
+        max-idle: 300
+        max-active: 600
+        max-wait: 100ms
+        min-idle: 0
+isProduct: false
+
+
+
+
+

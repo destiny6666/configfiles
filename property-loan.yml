@@ -1,7 +1,7 @@
 spring:
   banner:
     charset: utf-8
-    location: classpath:banner.txt
+    location: classpath:banner123.txt
   profiles:
     active: pro
   application:

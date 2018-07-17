@@ -20,4 +20,9 @@ spring:
         max-active: 600
         max-wait: 100ms
         min-idle: 0
+  rabbitmq:
+    host: 192.168.100.161
+    port: 5672
+    username: admin
+    password: admin
 isProduct: false
